@@ -9,9 +9,11 @@ void main() {
           title: Text('Flutter Base'),
           backgroundColor: Colors.blueGrey[900],
         ),
-        body: Image(
-          image: NetworkImage(
-              'https://i2.wp.com/www.oakridge.in/wp-content/uploads/2020/02/Sample-jpg-image-500kb.jpg'),
+        body: Center(
+          child: Image(
+            image: NetworkImage(
+                'https://i2.wp.com/www.oakridge.in/wp-content/uploads/2020/02/Sample-jpg-image-500kb.jpg'),
+          ),
         ),
       ),
     ),
