@@ -4,10 +4,10 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.yellow[200],
         appBar: AppBar(
           title: Text('Flutter Base'),
-          backgroundColor: Colors.blueGrey[900],
+          backgroundColor: Colors.redAccent,
         ),
         body: Center(
           child: Image(
