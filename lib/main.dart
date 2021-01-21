@@ -22,10 +22,22 @@ class MyApp extends StatelessWidget {
               Text(
                 '煉獄 杏寿郎',
                 style: TextStyle(
-                    color: Colors.red[700],
-                    fontSize: 40.0,
-                    fontWeight: FontWeight.bold),
-              )
+                  color: Colors.red[700],
+                  fontFamily: 'Sawarabi',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '炎柱',
+                style: TextStyle(
+                  color: Colors.red[500],
+                  fontFamily: 'Sawarabi',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 4,
+                ),
+              ),
             ],
           ),
         ),
