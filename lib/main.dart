@@ -18,6 +18,13 @@ class MyApp extends StatelessWidget {
               CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/purgatory.png'),
+              ),
+              Text(
+                '煉獄 杏寿郎',
+                style: TextStyle(
+                    color: Colors.red[700],
+                    fontSize: 40.0,
+                    fontWeight: FontWeight.bold),
               )
             ],
           ),
