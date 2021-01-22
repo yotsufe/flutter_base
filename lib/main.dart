@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.yellow[100],
+        backgroundColor: Colors.yellow[300],
         body: SafeArea(
           child: Column(
             children: [
@@ -36,6 +36,52 @@ class MyApp extends StatelessWidget {
                   fontSize: 20.0,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 4,
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 24.0,
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.red[300],
+                      size: 20.0,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '090 1234 5678',
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 24.0,
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.mail,
+                      color: Colors.red[300],
+                      size: 20.0,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'abcde12345@abcde.com',
+                    ),
+                  ],
                 ),
               ),
             ],
