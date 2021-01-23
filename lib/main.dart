@@ -44,22 +44,14 @@ class MyApp extends StatelessWidget {
                   vertical: 10.0,
                   horizontal: 24.0,
                 ),
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        color: Colors.red[300],
-                        size: 20.0,
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Text(
-                        '090 1234 5678',
-                      ),
-                    ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.red[300],
+                    size: 20.0,
+                  ),
+                  title: Text(
+                    '090 1234 5678',
                   ),
                 ),
               ),
