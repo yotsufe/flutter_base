@@ -38,50 +38,46 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 4,
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 24.0,
                 ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.red[300],
-                      size: 20.0,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '090 1234 5678',
-                    ),
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: Colors.red[300],
+                        size: 20.0,
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Text(
+                        '090 1234 5678',
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
                   horizontal: 24.0,
                 ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail,
-                      color: Colors.red[300],
-                      size: 20.0,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'abcde12345@abcde.com',
-                    ),
-                  ],
+                child: ListTile(
+                  leading: Icon(
+                    Icons.mail,
+                    color: Colors.red[300],
+                    size: 20.0,
+                  ),
+                  title: Text(
+                    'abcde12345@abcde.com',
+                  ),
                 ),
               ),
             ],
