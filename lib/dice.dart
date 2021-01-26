@@ -17,6 +17,21 @@ class Dice extends StatelessWidget {
 class DiceBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row();
+    return Row(
+      children: [
+        Expanded(
+          flex: 1,
+          child: Image(
+            image: AssetImage('images/dice1.png'),
+          ),
+        ),
+        Expanded(
+          flex: 1,
+          child: Image(
+            image: AssetImage('images/dice1.png'),
+          ),
+        ),
+      ],
+    );
   }
 }
