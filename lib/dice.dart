@@ -21,9 +21,7 @@ class DiceBody extends StatelessWidget {
       children: [
         Expanded(
           flex: 1,
-          child: Image(
-            image: AssetImage('images/dice1.png'),
-          ),
+          child: Image.asset('images/dice1.png'),
         ),
         Expanded(
           flex: 1,
