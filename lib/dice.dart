@@ -4,7 +4,19 @@ class Dice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow[300],
+      backgroundColor: Colors.red,
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: Text('Dice'),
+      ),
+      body: DiceBody(),
     );
+  }
+}
+
+class DiceBody extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row();
   }
 }
