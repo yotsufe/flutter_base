@@ -17,17 +17,29 @@ class Dice extends StatelessWidget {
 class DiceBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex: 1,
-          child: Image.asset('images/dice1.png'),
-        ),
-        Expanded(
-          flex: 1,
-          child: Image.asset('images/dice1.png'),
-        ),
-      ],
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+                print('onPressed Left');
+              },
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: FlatButton(
+              onPressed: () {
+                print('onPressed Right');
+              },
+              child: Image.asset('images/dice1.png'),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
