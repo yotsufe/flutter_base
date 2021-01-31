@@ -45,7 +45,9 @@ class _DiceBodyState extends State<DiceBody> {
             flex: 1,
             child: FlatButton(
               onPressed: () {
-                changeDiceFace();
+                setState(() {
+                  changeDiceFace();
+                });
               },
               child: Image.asset('images/dice$rightDiceNumber.png'),
             ),
