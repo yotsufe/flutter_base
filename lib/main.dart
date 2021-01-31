@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_base/dice.dart';
+import 'package:flutter_base/xylophone.dart';
 
 void main() {
   runApp(
@@ -93,6 +94,21 @@ class MyApp extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) {
                       return Dice();
+                    },
+                  ),
+                );
+              },
+            ),
+            RaisedButton(
+              child: const Text('Xylophone'),
+              color: Colors.orange,
+              textColor: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Xylophone();
                     },
                   ),
                 );
