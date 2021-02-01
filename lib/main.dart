@@ -4,13 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_base/dice.dart';
 import 'package:flutter_base/xylophone.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: MyApp(),
-    ),
-  );
-}
+void main() => runApp(MaterialApp(home: MyApp()));
 
 class MyApp extends StatelessWidget {
   @override
