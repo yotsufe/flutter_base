@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_base/bmicalculator.dart';
 import 'package:flutter_base/dice.dart';
 import 'package:flutter_base/xylophone.dart';
 
@@ -103,6 +104,21 @@ class MyApp extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) {
                       return Xylophone();
+                    },
+                  ),
+                );
+              },
+            ),
+            RaisedButton(
+              child: const Text('BMI Calculator'),
+              color: Colors.orange,
+              textColor: Colors.white,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return BmiCalculator();
                     },
                   ),
                 );
