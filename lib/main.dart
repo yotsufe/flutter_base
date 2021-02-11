@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_base/bmicalculator.dart';
+import 'package:flutter_base/bmicalculator/bmicalculator.dart';
 import 'package:flutter_base/dice.dart';
 import 'package:flutter_base/xylophone.dart';
 
