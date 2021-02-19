@@ -25,30 +25,19 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     colour: Color(cardColor),
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mars,
-                          size: 80.0,
-                        ),
-                        SizedBox(
-                          height: 15.0,
-                        ),
-                        Text(
-                          'MALE',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            color: Color(0xFF8D8E98),
-                          ),
-                        )
-                      ],
+                    cardChild: ChildCard(
+                      gender: 'MALE',
+                      genderIcon: FontAwesomeIcons.mars,
                     ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     colour: Color(cardColor),
+                    cardChild: ChildCard(
+                      gender: 'FEMALE',
+                      genderIcon: FontAwesomeIcons.venus,
+                    ),
                   ),
                 ),
               ],
@@ -102,6 +91,35 @@ class ReusableCard extends StatelessWidget {
         color: colour,
         borderRadius: BorderRadius.circular(10.0),
       ),
+    );
+  }
+}
+
+class ChildCard extends StatelessWidget {
+  ChildCard({@required this.gender, @required this.genderIcon});
+
+  final String gender;
+  final IconData genderIcon;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          genderIcon,
+          size: 80.0,
+        ),
+        SizedBox(
+          height: 15.0,
+        ),
+        Text(
+          gender,
+          style: TextStyle(
+            fontSize: 18.0,
+            color: Color(0xFF8D8E98),
+          ),
+        )
+      ],
     );
   }
 }
