@@ -16,13 +16,8 @@ class _InputPageState extends State<InputPage> {
   Color femaleCardColor = inactiveCardColor;
 
   void updateGenderCardColor(bool isMale) {
-    if (isMale) {
-      maleCardColor = activeCardColor;
-      femaleCardColor = inactiveCardColor;
-    } else {
-      maleCardColor = inactiveCardColor;
-      femaleCardColor = activeCardColor;
-    }
+    maleCardColor = isMale ? activeCardColor : inactiveCardColor;
+    femaleCardColor = isMale ? inactiveCardColor : activeCardColor;
   }
 
   @override
@@ -137,6 +132,7 @@ class ChildCard extends StatelessWidget {
         Icon(
           genderIcon,
           size: 80.0,
+          color: Colors.white,
         ),
         SizedBox(
           height: 15.0,
