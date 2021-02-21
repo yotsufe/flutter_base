@@ -32,34 +32,30 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         updateGenderCardColor(true);
                       });
                     },
-                    child: ReusableCard(
-                      colour: maleCardColor,
-                      cardChild: ChildCard(
-                        gender: 'MALE',
-                        genderIcon: FontAwesomeIcons.mars,
-                      ),
+                    colour: maleCardColor,
+                    cardChild: ChildCard(
+                      gender: 'MALE',
+                      genderIcon: FontAwesomeIcons.mars,
                     ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    onPress: () {
                       setState(() {
                         updateGenderCardColor(false);
                       });
                     },
-                    child: ReusableCard(
-                      colour: femaleCardColor,
-                      cardChild: ChildCard(
-                        gender: 'FEMALE',
-                        genderIcon: FontAwesomeIcons.venus,
-                      ),
+                    colour: femaleCardColor,
+                    cardChild: ChildCard(
+                      gender: 'FEMALE',
+                      genderIcon: FontAwesomeIcons.venus,
                     ),
                   ),
                 ),
@@ -100,19 +96,23 @@ class _InputPageState extends State<InputPage> {
 }
 
 class ReusableCard extends StatelessWidget {
-  ReusableCard({@required this.colour, this.cardChild});
+  ReusableCard({@required this.colour, this.cardChild, this.onPress});
 
   final Color colour;
   final Widget cardChild;
+  final Function onPress;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: cardChild,
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        color: colour,
-        borderRadius: BorderRadius.circular(10.0),
+    return GestureDetector(
+      onTap: onPress,
+      child: Container(
+        child: cardChild,
+        margin: EdgeInsets.all(15.0),
+        decoration: BoxDecoration(
+          color: colour,
+          borderRadius: BorderRadius.circular(10.0),
+        ),
       ),
     );
   }
