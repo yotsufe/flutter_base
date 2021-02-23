@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_base/constants.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-const bottomContainerHeight = 80.0;
-const bottomContainerColor = Color(0xFFEB1555);
-const activeCardColor = Color(0xFF1D1E33);
-const inactiveCardColor = Color(0xFF111328);
 
 class InputPage extends StatefulWidget {
   @override
@@ -12,12 +8,12 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
-  Color maleCardColor = inactiveCardColor;
-  Color femaleCardColor = inactiveCardColor;
+  Color maleCardColor = kInactiveCardColor;
+  Color femaleCardColor = kInactiveCardColor;
 
   void updateGenderCardColor(bool isMale) {
-    maleCardColor = isMale ? activeCardColor : inactiveCardColor;
-    femaleCardColor = isMale ? inactiveCardColor : activeCardColor;
+    maleCardColor = isMale ? kActiveCardColor : kInactiveCardColor;
+    femaleCardColor = isMale ? kInactiveCardColor : kActiveCardColor;
   }
 
   @override
@@ -64,7 +60,12 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              colour: activeCardColor,
+              colour: kActiveCardColor,
+              cardChild: Column(
+                children: [
+                  Text('height'),
+                ],
+              ),
             ),
           ),
           Expanded(
@@ -72,22 +73,22 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    colour: activeCardColor,
+                    colour: kActiveCardColor,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: activeCardColor,
+                    colour: kActiveCardColor,
                   ),
                 ),
               ],
             ),
           ),
           Container(
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           ),
         ],
       ),
@@ -139,10 +140,7 @@ class ChildCard extends StatelessWidget {
         ),
         Text(
           gender,
-          style: TextStyle(
-            fontSize: 18.0,
-            color: Color(0xFF8D8E98),
-          ),
+          style: kLabelTextStyle,
         )
       ],
     );
